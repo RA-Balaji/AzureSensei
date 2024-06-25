@@ -1,8 +1,6 @@
 import streamlit as st
 import chatbot as chatbot
 
-nvidia_api_key = st.secrets["NVIDIA_API_KEY"]
-
 st.title("Welcome To Azure Sensei")\
 
 # Sidebar for chat history
