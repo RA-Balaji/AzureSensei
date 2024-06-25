@@ -1,6 +1,7 @@
 # from models.chatbot import Query
 import db
 import time
+import streamlit as st
 
 
 from openai import AzureOpenAI
@@ -16,7 +17,7 @@ import var
 # def query_response_get(query_id):
 #     db.query.response_get(query_id)
 
-AOAI_client = AzureOpenAI(api_key=var.AZURE_OPENAI_KEY,azure_endpoint=var.AZURE_OPENAI_ENDPOINT,api_version=var.AZURE_OPENAI_VERSION)
+AOAI_client = AzureOpenAI(api_key=st.secrets["AZURE_OPENAI_KEY"],azure_endpoint=st.secrets["AZURE_OPENAI_ENDPOINT"],api_version=st.secrets["AZURE_OPENAI_VERSION"])
 collection = db.get_azure_collection()
 
 
